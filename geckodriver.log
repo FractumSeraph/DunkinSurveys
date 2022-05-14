@@ -1,0 +1,222 @@
+1652122331293	geckodriver	INFO	Listening on 127.0.0.1:61350
+1652122334362	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--remote-debugging-port" "61351" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileZZrI7Y"
+1652122334730	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:61351
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileZZrI7Y\\search.json.mozlz4", (void 0)))
+1652122336686	Marionette	INFO	Listening on port 61380
+Read port: 61380
+1652122336710	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://localhost:61351/devtools/browser/1f59344f-0add-4530-b8b6-53692850e73e
+1652122414831	geckodriver	INFO	Listening on 127.0.0.1:61421
+1652122417865	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--remote-debugging-port" "61422" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofilewRmOse"
+1652122418226	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:61422
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofilewRmOse\\search.json.mozlz4", (void 0)))
+1652122420095	Marionette	INFO	Listening on port 61444
+DevTools listening on ws://localhost:61422/devtools/browser/456a3e42-1771-4269-bc20-f872cfbb1377
+Read port: 61444
+1652122420206	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+1652122449489	Marionette	INFO	Stopped listening on port 61444
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1652559529942	geckodriver	INFO	Listening on 127.0.0.1:56697
+1652559532989	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--remote-debugging-port" "56698" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileefHAEu"
+1652559533203	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:56698
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileefHAEu\\search.json.mozlz4", (void 0)))
+1652559534532	Marionette	INFO	Listening on port 56717
+DevTools listening on ws://localhost:56698/devtools/browser/1390f11a-f848-4701-ab6d-0ca9f312e994
+Read port: 56717
+1652559534628	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+1652559540525	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1652559541242	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+1652559550138	Marionette	INFO	Stopped listening on port 56717
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1652559556360	geckodriver	INFO	Listening on 127.0.0.1:56772
+1652559559399	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--remote-debugging-port" "56773" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofile9AE7N5"
+1652559559597	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:56773
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofile9AE7N5\\search.json.mozlz4", (void 0)))
+1652559560873	Marionette	INFO	Listening on port 56792
+DevTools listening on ws://localhost:56773/devtools/browser/56e591ef-b8c5-496d-8a05-90fee7c5b7ca
+Read port: 56792
+1652559560986	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+1652559567090	geckodriver	INFO	Listening on 127.0.0.1:56861
+1652559570106	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--remote-debugging-port" "56862" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofile67bfgp"
+1652559570306	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:56862
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofile67bfgp\\search.json.mozlz4", (void 0)))
+1652559571519	Marionette	INFO	Listening on port 56882
+DevTools listening on ws://localhost:56862/devtools/browser/b329730d-3a7f-49c5-981d-71543ece0d8a
+Read port: 56882
+1652559571625	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+1652559577618	geckodriver	INFO	Listening on 127.0.0.1:56947
+1652559580665	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--remote-debugging-port" "56948" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofilekWu8jj"
+1652559580865	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:56948
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofilekWu8jj\\search.json.mozlz4", (void 0)))
+1652559582174	Marionette	INFO	Listening on port 56970
+Read port: 56970
+1652559582203	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://localhost:56948/devtools/browser/f003c920-5a92-4fe8-92ea-8eda959a7b0b
+1652560446238	geckodriver	INFO	Listening on 127.0.0.1:57275
+1652560449286	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "57276" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileB4Sqg1"
+*** You are running in headless mode.
+1652560449487	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:57276
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileB4Sqg1\\search.json.mozlz4", (void 0)))
+1652560450179	Marionette	INFO	Listening on port 57295
+DevTools listening on ws://localhost:57276/devtools/browser/87255f26-7b85-4aed-afbc-b433d472b52c
+Read port: 57295
+1652560450288	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1652560486207	geckodriver	INFO	Listening on 127.0.0.1:57349
+1652560489262	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "57350" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofiledg8jnV"
+*** You are running in headless mode.
+1652560489463	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:57350
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofiledg8jnV\\search.json.mozlz4", (void 0)))
+1652560490165	Marionette	INFO	Listening on port 57369
+DevTools listening on ws://localhost:57350/devtools/browser/cd1dad4f-b0e6-4617-ab5a-573ffe6f1c14
+Read port: 57369
+1652560490263	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+1652560528066	geckodriver	INFO	Listening on 127.0.0.1:57426
+1652560531127	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "57427" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileF09kXm"
+*** You are running in headless mode.
+1652560531334	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:57427
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileF09kXm\\search.json.mozlz4", (void 0)))
+1652560531923	Marionette	INFO	Listening on port 57443
+DevTools listening on ws://localhost:57427/devtools/browser/d548938a-204d-4197-a580-a948e8b5bd00
+Read port: 57443
+1652560532025	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+1652560543653	geckodriver	INFO	Listening on 127.0.0.1:57511
+1652560546719	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "57512" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileI00COB"
+*** You are running in headless mode.
+1652560546922	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:57512
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileI00COB\\search.json.mozlz4", (void 0)))
+1652560547583	Marionette	INFO	Listening on port 57530
+Read port: 57530
+1652560547609	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://localhost:57512/devtools/browser/a9556df6-0481-4fba-a078-623c79297825
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+1652560559533	geckodriver	INFO	Listening on 127.0.0.1:57603
+1652560562609	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "57604" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileHjqvAs"
+*** You are running in headless mode.
+1652560562813	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:57604
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileHjqvAs\\search.json.mozlz4", (void 0)))
+1652560563498	Marionette	INFO	Listening on port 57623
+DevTools listening on ws://localhost:57604/devtools/browser/be53a7a5-44bb-4a74-bd7c-0f20bf973f86
+Read port: 57623
+1652560563607	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+1652560574838	geckodriver	INFO	Listening on 127.0.0.1:57689
+1652560577908	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "57690" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofile8eh3ca"
+*** You are running in headless mode.
+1652560578114	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:57690
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofile8eh3ca\\search.json.mozlz4", (void 0)))
+1652560578821	Marionette	INFO	Listening on port 57706
+DevTools listening on ws://localhost:57690/devtools/browser/c3ddb345-c927-4a20-812e-28a4422937ee
+Read port: 57706
+1652560578915	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+1652560590520	geckodriver	INFO	Listening on 127.0.0.1:57775
+1652560593584	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "57776" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileqalnrU"
+*** You are running in headless mode.
+1652560593782	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:57776
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileqalnrU\\search.json.mozlz4", (void 0)))
+1652560594467	Marionette	INFO	Listening on port 57795
+Read port: 57795
+1652560594485	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://localhost:57776/devtools/browser/48e11782-2e06-44bc-9992-4c5ab7549dc6
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+1652560605282	geckodriver	INFO	Listening on 127.0.0.1:57862
+1652560608351	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "57863" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofilem2fopU"
+*** You are running in headless mode.
+1652560608552	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:57863
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofilem2fopU\\search.json.mozlz4", (void 0)))
+1652560609247	Marionette	INFO	Listening on port 57882
+DevTools listening on ws://localhost:57863/devtools/browser/4b2b6567-b2ca-43b5-9dfe-863ba36a0c71
+Read port: 57882
+1652560609350	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+1652560620165	geckodriver	INFO	Listening on 127.0.0.1:57949
+1652560623245	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "57950" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofilehyRT0d"
+*** You are running in headless mode.
+1652560623447	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:57950
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofilehyRT0d\\search.json.mozlz4", (void 0)))
+1652560624151	Marionette	INFO	Listening on port 57969
+DevTools listening on ws://localhost:57950/devtools/browser/8e6fc6f3-f946-4aca-89b3-639abd95d664
+Read port: 57969
+1652560624250	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dunkinrunsonyou.com"
+1652560635146	geckodriver	INFO	Listening on 127.0.0.1:58036
+1652560638220	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "58037" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileT3CuOy"
+*** You are running in headless mode.
+1652560638425	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:58037
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileT3CuOy\\search.json.mozlz4", (void 0)))
+1652560639076	Marionette	INFO	Listening on port 58054
+Read port: 58054
+DevTools listening on ws://localhost:58037/devtools/browser/a9f85f55-d6c1-4bf6-a087-f555488fe890
+1652560639112	RemoteAgent	WARN	TLS certificate errors will be ignored for this session

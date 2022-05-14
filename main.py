@@ -1,12 +1,17 @@
+from time import sleep
+
 from splinter import Browser
+import selenium
 
 
 def submitsurvey(number, comment):
-    browser = Browser()  # defaults to firefox
+    browser = Browser('firefox', headless=True)  # defaults to firefox
     browser.visit('http://dunkinrunsonyou.com/')
+    sleep(1)
     browser.fill('spl_q_inrest_rcpt_code_txt', number)
     browser.find_by_name('forward_main-pager').click()
 
+    sleep(1)
     if browser.is_text_present("How likely are you to recommend Dunkin' to a friend or family member"):
         print("Survey code entered.")
     else:
@@ -17,6 +22,7 @@ def submitsurvey(number, comment):
     browser.fill('spl_q_inrest_score_cmt', comment)
     browser.find_by_id("buttonNext").click()
 
+    sleep(1)
     if browser.is_text_present("Based on your visit, how satisfied were you with the following areas"):
         print("First page completed, loaded page two.")
     else:
@@ -30,6 +36,7 @@ def submitsurvey(number, comment):
     browser.find_by_id("onf_q_inrest_visit_experience_yn_2").click()
     browser.find_by_id("buttonNext").click()
 
+    sleep(1)
     if browser.is_text_present(
             "We appreciate your feedback. As a thank you, we would like to email you a coupon for a"):
         print("Second page completed, loaded page three.")
@@ -39,17 +46,12 @@ def submitsurvey(number, comment):
     browser.find_by_id("onf_q_inrest_rcpt_additional_questions_alt_2").click()
     browser.find_by_id("buttonNext").click()
     print("Survey complete")
+    sleep(1)
 
 
-print("Enter the survey code. (Numbers only)")
-surveyCode = str(input())
-if len(surveyCode) != 18:
-    print("Error. Survey code should be 18 numbers.")
-    quit(2)
-
-print("Enter the nice comment you want to make.")
-surveyComment = str(input())
-
-submitsurvey(surveyCode, surveyComment)
+with open('list.txt') as f:
+    for index, line in enumerate(f):
+        submitsurvey(line.strip(), "")
+        print("Submitted code:" + line)
 
 print("Script has finished.")
