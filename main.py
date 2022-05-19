@@ -2,6 +2,8 @@ from sqlite3 import Error
 from time import sleep
 from splinter import Browser
 
+import os
+
 import sqlite3
 
 from telegram.ext.updater import Updater
@@ -11,13 +13,15 @@ from telegram.ext.commandhandler import CommandHandler
 from telegram.ext.messagehandler import MessageHandler
 from telegram.ext.filters import Filters
 
+botfathercode = os.environ['BOTFATHERCODE']
+
 try:
     conn = sqlite3.connect('database.db')
 except Error as e:
     print(e)
 
 # Create a cursor to allow to execute SQL commands
-cursor = conn.cursor()
+# cursor = conn.cursor()
 
 # Create a SQL Table
 sql_command = '''
@@ -27,7 +31,7 @@ sql_command = '''
             completed BOOL, 
         )'''
 
-cursor.execute(sql_command)
+# cursor.execute(sql_command)
 
 # Commit the changes to the database
 conn.commit()
@@ -67,7 +71,7 @@ def submit_survey(number, comment):
     sleep(1)
 
 
-updater = Updater("your_own_API_Token got from BotFather",
+updater = Updater(botfathercode,
                   use_context=True)
 
 
@@ -77,7 +81,7 @@ def start(update: Update, context: CallbackContext):
 
 
 def help(update: Update, context: CallbackContext):
-    update.message.reply_text("Your Message")
+    update.message.reply_text("This bot is still under construction. Commands are disabled.")
 
 
 def unknown_text(update: Update, context: CallbackContext):
@@ -114,4 +118,4 @@ def parse_list():
                 print("Survey code should be 18 numbers long, that one was " + str(len(line - 1)) + ". Removing it from the list.")
 
 
-print("Script has finished.")
+print("Script has reached the bottom.")
