@@ -2,6 +2,11 @@ from sqlite3 import Error
 from time import sleep
 from splinter import Browser
 
+import json
+
+from configparser import ConfigParser
+config = ConfigParser()
+
 import os
 
 import sqlite3
@@ -20,22 +25,11 @@ try:
 except Error as e:
     print(e)
 
-# Create a cursor to allow to execute SQL commands
-# cursor = conn.cursor()
-
-# Create a SQL Table
-sql_command = '''
-        CREATE TABLE IF NOT EXISTS surveys (
-            Id INTEGER PRIMARY KEY AUTOINCREMENT, 
-            code TEXT, 
-            completed BOOL, 
-        )'''
-
-
-# cursor.execute(sql_command)
-
-# Commit the changes to the database
-# conn.commit()
+config.read('config.ini')
+config.set('score', '012345', '1')
+print(config.get('score', '012345'))
+with open('config.ini', 'w') as f:
+    config.write(f)
 
 
 def submit_survey(number, comment):
@@ -85,7 +79,7 @@ def start(update: Update, context: CallbackContext):
 
 
 def help(update: Update, context: CallbackContext):
-    update.message.reply_text("This bot is still under construction. Commands are disabled.")
+    update.message.reply_text("Use the /addcodes command to submit surveys. For example \n /addcodes 012345678901234567 \n Use the /score command to show the scoreboard.")
 
 
 def unknown_text(update: Update, context: CallbackContext):
@@ -99,15 +93,34 @@ def unknown(update: Update, context: CallbackContext):
 
 
 def add_to_list(update: Update, context: CallbackContext):
+    user = update.message.from_user
+    print("Conversation started with " + str(user.id))
+    print('You talk with user {} and his user ID: {} '.format(user['username'], user['id']))
+    print(user)
     print(len(context.args))
     index: int
     for index, line in enumerate(context.args):
-        if len(line) == 18:
-            submit_survey(str(line).strip(), "")
-            print("Submitted " + str(index + 1) + " surveys.")
+        print("\nIteration number " + str(index + 1))
+        line = line + " "
+        sanitized_code = sanitize_code(line)
+        if sanitized_code != "":
+            submit_survey(str(sanitized_code).strip(), "")
+            print("Submitted code number " + str(index + 1) + ".")
+            if not config.has_option('score', str(user.id)):
+                config.set('score', str(user.id), str(0))
+            userscore = int(config.get('score', str(user.id)))
+            userscore +=1
+            config.set('score', str(user.id), str(userscore))
+            with open('config.ini', 'w') as f:
+                config.write(f)
+            update.message.reply_text(
+                "Success! Code " + sanitized_code + " was completed! \nYour score is now " + str(userscore) + ".")
         else:
-            print("Survey code should be 18 numbers long, that one was " +
-                  str(len(line) - 1) + ".")
+            print("Skipped number " + str(index + 1) + ". \n")
+            update.message.reply_text(
+                "Failed! Survey code may be mistyped.")
+            continue
+        print("addcodes command is complete.\n")
 
 
 def parse_list(update: Update, context: CallbackContext):
@@ -129,6 +142,10 @@ def parse_list(update: Update, context: CallbackContext):
         print("Reached the end of the list!")
 
 
+def score(update: Update, context: CallbackContext):
+    print("Scoreboard is under construction.")
+    update.message.reply_text("Scoreboard is under construction.")
+
 def sanitize_code(code):
     if len(code) != 19:
         print("Survey code should be 18 numbers long, that one was " + str(
@@ -146,6 +163,7 @@ updater.dispatcher.add_handler(CommandHandler('start', start))
 updater.dispatcher.add_handler(CommandHandler('parse', parse_list))
 updater.dispatcher.add_handler(CommandHandler('help', help))
 updater.dispatcher.add_handler(CommandHandler('addcodes', add_to_list, pass_args=True))
+updater.dispatcher.add_handler(CommandHandler('score', score))
 updater.dispatcher.add_handler(MessageHandler(Filters.text, unknown))
 updater.dispatcher.add_handler(MessageHandler(
     # Filters out unknown commands
@@ -155,5 +173,4 @@ updater.dispatcher.add_handler(MessageHandler(
 updater.dispatcher.add_handler(MessageHandler(Filters.text, unknown_text))
 
 updater.start_polling()
-
-print("Script has reached the bottom.")
+print("Script has reached the bottom and the updater is polling")
