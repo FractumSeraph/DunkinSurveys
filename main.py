@@ -8,6 +8,8 @@ import telegram
 from splinter import Browser
 
 import logging
+import re
+from re import search
 
 # Creating and Configuring Logger
 Log_Format = "LOGFILE  %(asctime)s %(levelname)s - %(message)s"
@@ -28,6 +30,7 @@ from telegram.ext import MessageHandler, Filters
 from PIL import Image
 
 import pytesseract
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract'
 
 botfathercode = os.environ['BOTFATHERCODE']
 storecode = os.environ['STORECODE']
@@ -60,6 +63,7 @@ def submit_survey(number, comment):
     try:
         logger.debug('submit_survey is running inside a try statement.')
         browser = Browser('firefox', headless=True)  # defaults to firefox
+        # browser = Browser('firefox', headless=False)  # defaults to firefox
         browser.visit('http://dunkinrunsonyou.com/')
         sleep(1)
         browser.fill('spl_q_inrest_rcpt_code_txt', number)
@@ -89,10 +93,20 @@ def submit_survey(number, comment):
         browser.find_by_id("buttonNext").click()
         # print("Survey " + number + " is complete")
         sleep(3)
+        browser.quit()
     except:
         logger.error("submit_survey has encountered an exception! Passing.")
+        browser.quit()
         pass
 
+
+def connect_to_dunkin_wifi():
+    # https://n254.network-auth.com/Dunkin-Donuts-Gu/hi/v_Cdjdh/grant?continue_url=https://www.dunkindonuts.com
+    logger.debug('Attempting to connect to network authentication')
+    browser = Browser('firefox', headless=True)  # defaults to firefox
+    #        browser = Browser('firefox', headless=False)  # defaults to firefox
+    browser.visit('https://n254.network-auth.com/Dunkin-Donuts-Gu/hi/v_Cdjdh/grant?continue_url=https://www.dunkindonuts.com')
+    sleep(1)
 
 updater = Updater(botfathercode, use_context=True)
 dispatcher = updater.dispatcher
@@ -111,13 +125,12 @@ def help(update: Update, context: CallbackContext):
     logger.debug("/help has been called by " + str(update.message.from_user.id))
 
 
-# def unknown_text(update: Update, context: CallbackContext):
-#    if not update.message.photo:
-#        update.message.reply_text(
-#            "Sorry I can't recognize you , you said '%s'" % update.message.text)
-#    else:
-#        photosize = bot.getFile(update.message.photo[-1].file_id)
-#        _photosize_to_parsed(bot, update, photosize)
+def unknown_text(update: Update, context: CallbackContext):
+    if not update.message.photo:
+        update.message.reply_text("Sorry I can't recognize you , you said '%s'" % update.message.text)
+    else:
+       photosize = bot.getFile(update.message.photo[-1].file_id)
+#      photosize_to_parsed(bot, update, photosize)
 
 
 def unknown(update: Update, context: CallbackContext):
@@ -145,13 +158,13 @@ def add_to_list(update: Update, context: CallbackContext):
                 config.write(f)
             update.message.reply_text(
                 "Success! Code " + sanitized_code + " was completed! \nYour score is now " + str(userscore) + ".")
-            print("Calling addtodatabase with " + str(sanitized_code) + " " + str(user.id))
             add_to_database(sanitized_code, str(user.id))
         else:
             update.message.reply_text(
                 "Failed! Survey code may be mistyped.")
             continue
-        print("/addcodes command for " + str(user.id) + " is complete.\n")
+        print("/addcodes " + str(sanitized_code) +" command for " + str(user.id) + " is complete.\n")
+        logger.info(str(user.id) + " has successfully completed code " + str(sanitized_code))
 
 
 def parse_list(update: Update, context: CallbackContext):
@@ -175,7 +188,7 @@ def parse_list(update: Update, context: CallbackContext):
 
 
 def score(update: Update, context: CallbackContext):
-    logger.debug("/score has been called by " + str(update.message.from_user.id))
+    logger.info("/score has been called by " + str(update.message.from_user.id))
     user = update.message.from_user
     today = date.today()
     print(str(user.id) + " " + str(user.username) + " has requested the scoreboard.")
@@ -203,8 +216,7 @@ def sanitize_code(code):
 def image_to_string(image):
     logger.debug("image_to_string has been called")
     imagetext = pytesseract.image_to_string(Image.open(image))
-    print(imagetext)
-    return
+    return imagetext
 
 
 def add_to_database(code, completedby):
@@ -231,8 +243,13 @@ def image_handler(update, context):
     logger.debug("image_handler has been called")
     file = bot.getFile(update.message.photo[-1].file_id)
     path = file.download("output.jpg")
-    print(path)
-    image_to_string(path)
+    ocr_text = image_to_string(path)
+    ocr_text = str(ocr_text).split("\n")
+    for line in ocr_text:
+        print("LINE " + line)
+        if search("Survey Code", ocr_text):
+            print("FOUND!")
+            print(line)
 
 
 updater.dispatcher.add_handler(MessageHandler(Filters.photo, image_handler))
@@ -246,8 +263,8 @@ updater.dispatcher.add_handler(MessageHandler(
     # Filters out unknown commands
     Filters.command, unknown))
 
-# tesseract_handler = CommandHandler('tesseract', handler.tesseract)
-# updater.dispatcher.add_handler(tesseract_handler)
+#tesseract_handler = CommandHandler('tesseract', handler.tesseract)
+#updater.dispatcher.add_handler(tesseract_handler)
 
 # message_handler = MessageHandler(Filters.photo, handler.message)
 # updater.dispatcher.add_handler(message_handler)
@@ -256,5 +273,6 @@ updater.dispatcher.add_handler(MessageHandler(
 # updater.dispatcher.add_handler(MessageHandler(Filters.text, unknown_text))
 
 updater.start_polling()
+
 print("Script has reached the bottom and the updater is polling\n")
 logger.debug("Reached the bottom of the code!")
